@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(shoriful/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+.container{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+}
+.header-top img{
+    height: 50px;
+    margin-top: 10px;
+}
+nav{
+    line-height: 80px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: white;
+    padding: 10px;
+}
+nav ul li::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    top: 55px;
+    left: 10px;
+    position: absolute;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 80%;
+}
+.hero{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    /* animation: hero; */
+    animation-name: hero;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes hero {
+    from {top: 0px; }
+     to {top: 50%;  }
+}
+.hero h1{
+    margin-top: 80px;
+    font-size: 60px;
+}
+.hero p{
+    color: gray;
+}
+.main-btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn-color{
+    background-color: darkred;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+.main-btn:hover .btn-color{
+    width: 100%;
+}
+
+.about-bg{
+    background-color: darkcyan;
+}
+.about{
+    width: 85%;
+    margin: auto;
+}
+.about h1{
+    text-align: center;
+    padding: 100px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+section{
+    padding-bottom: 70px;
+}
+.about-section{
+    display: flex;
+}
+.half-width{
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+}
+.half-width img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.half-width h2{
+    margin-top: 60px;
+    font-size: 35px;
+    line-height: 80px;
+}
+
+.half-width p{
+    /* color: gray; */
+    line-height: 30px;
+
+}
+
+.portfolio{
+    width: 85%;
+    margin-left: 5%;
+}
+ .portfolio h1{
+        text-align: center;
+        padding: 100px;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+.portfolio-section{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 20px;
+    position: relative;
+}
+.photo-frame{
+    width: 400px;
+    height: 250px;
+    border-radius: 5px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-frame .photo img{
+    width: 100%;
+}
+.photo-frame:hover .photo img{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.photo-frame::before{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background-color: red;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: 0.5s;
+    z-index: 1;
+}
+.photo-frame:hover::before{
+    width: 50%;
+}
+.photo-frame::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: darkred;
+    right: 0;
+    bottom: 0px;
+    position: absolute;
+    transition: 0.5s;
+}
+.photo-frame:hover::after{
+    width: 50%;
+}
+.form-area h1{
+    padding: 50px 0px 50px 0px;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+}
+.form-area h1::after{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: darkred;
+    position:absolute;
+    top: 100px;
+    left: 42%;
+    z-index: 1;
+    transition: 0.5s;
+}
+.form-area h1:hover::after{
+    width: 15%;
+}
+
+.feature{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.feature h2{
+    font-size: 40px;
+}
+.feature p{
+    font-size: 20px;
+    color: gray;
+}
+.working{
+    background-color: lightgray;
+    padding: 50px;
+}
+.work-icon i{
+    font-size: 50px;
+    line-height: 110px;
+    color: #ff214f;
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    transition: all 1s ease;
+
+}
+.work-cart:hover .work-icon i{
+    background-color: #ff214f;
+    color: white;
+}
+.work-cart{
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+.personal-work{
+    display: flex;
+}
+
+.form-bg{
+    background-color: darkturquoise;
+}
+.form-area{
+    width: 85%;
+    margin-left: 5%;
+    
+}
+.form-area h1{
+    padding: 50px 0px 50px 0px;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+}
+.form-area h1::after{
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: red;
+    position:absolute;
+    top: 150px;
+    left: 40%;
+    z-index: 1;
+    transition: 0.5s;
+}
+.form-area h1:hover::after{
+    width: 20%;
+}
+.form-area form{
+    width: 40%;
+    margin: auto;
+    background-color: darkcyan;
+    padding: 30px;
+    border-radius: 10px;
+}
+form p{
+    font-size: 18px;
+    line-height: 30px;
+}
+input{
+    /* background: transparent; */
+    height: 25px;
+    width: 97%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: auto;
+}
+.required{
+    color: red;
+}
+textarea{
+    border-radius: 10px;
+}
+form .submit-btn{
+    width: 40%;
+    margin: 10px auto;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 3px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+form .submit-btn:hover{
+    background-color: darkred;
+}
+
+.footer-bg{
+    background-color: #191A1F;
+    color: white;
+    padding: 50px 0px 20px 0px;
+}
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-left: 5%;
+    padding-bottom: 20px;
+}
+.footer a{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 3px;
+    display: block !important;
+    color: #fff;
+    text-decoration: none;
+}
+.footer input{
+    width: 80%;
+}
+.footer-bottom p{
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    text-align: center;
+}
