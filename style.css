@@ -295,7 +295,7 @@ section{
     height: 5px;
     background-color: red;
     position:absolute;
-    top: 150px;
+    top: 100px;
     left: 40%;
     z-index: 1;
     transition: 0.5s;
